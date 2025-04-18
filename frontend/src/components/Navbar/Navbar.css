@@ -86,7 +86,7 @@
     }
   }
 
-  @media (max-width: 900px) {
+@media (max-width:900px) {
     .navbar .logo{
       width: 120px;
     }
@@ -108,6 +108,6 @@
 
 @media (max-width:750px) {
     .navbar-menu{
-        display: none;
+    display: none;
     }
 }

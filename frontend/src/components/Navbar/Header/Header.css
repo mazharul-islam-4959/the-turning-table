@@ -1,11 +1,12 @@
-.header{
+.header {
     height: 34vw;
     margin: 30px auto;
     background: url('/header_img.png') no-repeat;
+    background-size: contain;
     position: relative;
 }
 
-.header-contents{
+.header-contents {
 
     position: absolute;
     display: flex;
@@ -19,10 +20,10 @@
 
 }
 
-.header-contents h2{
+.header-contents h2 {
 
     font-weight: 500;
-    color:rgb(202, 233, 223);
+    color: rgb(202, 233, 223);
     font-size: max(4.5vw, 22px);
 }
 
@@ -30,7 +31,8 @@
     color: aliceblue;
     font-size: 1vw;
 }
-.header-contents button{
+
+.header-contents button {
     border: none;
     color: rgb(148, 122, 91);
     font-weight: 500;
@@ -41,20 +43,22 @@
 
 }
 
- @media(max-width:1050px) {
-    .header-contents{
+@media(max-width:1050px) {
+    .header-contents {
         max-width: 45%;
-     }
- }
- @media (max-width: 750px)
- {
- .header-contents{
- max-width: 65%;
- }
- .header-contents p{
- display: none;
- }
- .header-contents button {
- padding: 2vw 4vw;
- }
- } 
+    }
+}
+
+@media (max-width:750px) {
+    .header-contents {
+        max-width: 65%;
+    }
+
+    .header-contents p {
+        display: none;
+    }
+
+    .header-contents button {
+        padding: 2vw 4vw;
+    }
+}
