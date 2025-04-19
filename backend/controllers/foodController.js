@@ -4,8 +4,8 @@ import fs, { truncateSync } from "fs";
 // add food item
 const addFood = async (req, res) => {
     // Use uploaded filename or fallback to a default
-    let image_filename = req.file ? req.file.filename : "default.png";  // this might need to change (trash)
-
+    //let image_filename = req.file ? req.file.filename : "default.png";  // this might need to change (trash)
+    let image_filename = `${req.file.filename}`;
     const food = new foodModel({
         name: req.body.name,
         description: req.body.description,
