@@ -25,6 +25,8 @@ connectDB();
 app.use("/api/food", foodRouter);
 app.use("image",express.static("uploads"))
 app.use("/api/user",userRouter)
+app.use("/api/cart".cartRouter)
+
 
 app.get("/", (req, res) => {         
     res.send("Api Working");   
