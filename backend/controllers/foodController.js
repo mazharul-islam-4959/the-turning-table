@@ -5,7 +5,7 @@ import fs, { truncateSync } from "fs";
 const addFood = async (req, res) => {
     // Use uploaded filename or fallback to a default
     //let image_filename = req.file ? req.file.filename : "default.png";  // this might need to change (trash)
-    let image_filename = `${req.file.filename}`;
+    let image_filename = `${req.file.filename}`; //multer for image uploade
     const food = new foodModel({
         name: req.body.name,
         description: req.body.description,
