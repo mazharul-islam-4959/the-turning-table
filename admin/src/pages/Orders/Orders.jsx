@@ -24,6 +24,20 @@ const Orders = ({url}) => {
     }
 
   }
+
+  const statusHandler = async (event,orderId) => {
+    console.log(event,orderId);
+    const response = await axios.post(url+"api/order/status",{
+      orderId,
+      status:event.target.value 
+    })
+    if (response.data.success){
+      await fetchAllOrders();
+    }
+
+
+  }
+
   useEffect(()=>{
     fetchAllOrders();
 
@@ -49,6 +63,7 @@ const Orders = ({url}) => {
                 })}
 
               </p>
+              
             </div>
 
           </div>
