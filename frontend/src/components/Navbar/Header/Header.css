@@ -43,6 +43,23 @@
 
 }
 
+.header-contents {
+    gap: 1vw; /* fix here */
+}
+
+.header-contents button {
+    cursor: pointer; /* add pointer */
+}
+
+/* Optional */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
 @media(max-width:1050px) {
     .header-contents {
         max-width: 45%;
