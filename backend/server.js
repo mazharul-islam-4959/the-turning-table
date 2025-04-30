@@ -6,6 +6,7 @@ import userRouter from "./routes/userRoute.js";
 import'dotenv/config';
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
+import chatbotRoute from "./routes/chatbotRoute.js";   // 👈  this line here chatbot
 
 
 const app = express();
@@ -29,6 +30,7 @@ app.use("image",express.static("uploads"))
 app.use("/api/user",userRouter)
 app.use("/api/cart",cartRouter)
 app.use("/api/order",orderRouter)
+app.use("/api/chat", chatbotRoute);  // 👈 this line here chatbot
 
 
 app.get("/", (req, res) => {         

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';  // Added useSta
 import './MyOrders.css';
 import { StoreContext } from '../../context/StoreContext';
 import { assets } from '../../assets/assets';
+import axios from 'axios';  // ✅ Only this was missing
 
 const MyOrders = () => {
 
@@ -9,7 +10,7 @@ const MyOrders = () => {
     const [data, setData] = useState([]);  // Added useState for data
 
     const fetchOrders = async () => {
-        const response = await axios.post(url + "/api/order/useorders", {}, { headers: { token } });
+        const response = await axios.post(url + "/api/order/userorders", {}, { headers: { token } });  // ✅ Fixed small typo here
         setData(response.data.data);
     }
 
