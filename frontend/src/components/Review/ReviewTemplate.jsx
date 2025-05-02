@@ -59,8 +59,7 @@ const ReviewTemplate = () => {
       <div
         style={{ display: "block", justifyContent: "center", width: "60vw" }}
       >
-        {/* {token ? isReviewed ? <>update/delete</> : <>create</> : <>dont show</>} */}
-        <section>
+       {token ? <section>
           <h2 style={{ marginBottom: "20px" }}>Your Review</h2>
           <div
             style={{
@@ -84,7 +83,7 @@ const ReviewTemplate = () => {
                   color:
                     reviewByUser.score === option.value
                       ? option.color
-                      : "black", // Change text color on click
+                      : "black", 
                 }}
                 onClick={() =>
                   setReviewByUser((prev) => ({ ...prev, score: option.value }))
@@ -110,12 +109,12 @@ const ReviewTemplate = () => {
               style={{
                 marginTop: "10px",
                 padding: "10px",
-                backgroundColor: reviewByUser.score === -1 ? "gray" : "#3ba5ff", // Set button background color to blue
-                color: "white", // Set button text color to white
-                border: "none", // Remove default border
-                borderRadius: "5px", // Add border radius for rounded corners
-                cursor: "pointer", // Change cursor to pointer
-                transition: "background-color 0.3s", // Add transition for background color
+                backgroundColor: reviewByUser.score === -1 ? "gray" : "#3ba5ff",
+                color: "white", 
+                border: "none", 
+                borderRadius: "5px", 
+                cursor: "pointer", 
+                transition: "background-color 0.3s", 
               }}
               onClick={submitReviewAction}
               disabled={reviewByUser.score === -1}
@@ -129,12 +128,12 @@ const ReviewTemplate = () => {
                   marginTop: "10px",
                   marginLeft: "10px",
                   padding: "10px",
-                  backgroundColor: "red", // Set button background color to blue
-                  color: "white", // Set button text color to white
-                  border: "none", // Remove default border
-                  borderRadius: "5px", // Add border radius for rounded corners
-                  cursor: "pointer", // Change cursor to pointer
-                  transition: "background-color 0.3s", // Add transition for background color
+                  backgroundColor: "red",
+                  color: "white", 
+                  border: "none", 
+                  borderRadius: "5px", 
+                  cursor: "pointer", 
+                  transition: "background-color 0.3s", 
                 }}
                 onClick={deleteReviewAction}
               >
@@ -142,7 +141,7 @@ const ReviewTemplate = () => {
               </button>
             ) : null}
           </div>
-        </section>
+        </section>:null}
 
         <section>
           <div style={{ marginTop: "20px" }}>
@@ -165,17 +164,17 @@ const ReviewTemplate = () => {
                 >
                   <div
                     style={{
-                      width: "100px", // Increased width (50px * 3)
-                      height: "100px", // Increased height (50px * 3)
+                      width: "100px", 
+                      height: "100px",
                       border: `2px solid ${scoreOptions[item.score - 1].color}`,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       color: scoreOptions[item.score - 1].color,
                       fontWeight: "bold",
-                      fontSize: "36px", // Increased font size (12px * 3)
+                      fontSize: "36px",
                       marginRight: "10px",
-                      backgroundColor: "transparent", // Keep background transparent
+                      backgroundColor: "transparent", 
                     }}
                   >
                     {item.score}

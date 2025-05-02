@@ -14,6 +14,7 @@ import Verify from "./pages/Verify/Verify";
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [search, setSearch] = useState("");
+  
   return (
     <>
       {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
