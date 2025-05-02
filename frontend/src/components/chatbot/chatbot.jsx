@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import './Chatbot.css';
+import './chatbot.css';
 import axios from 'axios';
 import { StoreContext } from '../../context/StoreContext'; // get base URL from context
 
